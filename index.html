@@ -51,7 +51,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[47.877506550094836,0.2565742416742741],[49.03185758293074,3.381328697485779]]);
+        }).fitBounds([[47.877506550094836,0.2646403771746108],[49.03185758293074,3.373262561985443]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -508,8 +508,7 @@
         function pop_ZonesblanchesdelaidealimentaireEureetLoir_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Commune</th>\
-                        <td>' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['libgeo'] !== null ? autolinker.link(feature.properties['libgeo'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -619,8 +618,8 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/secours catholique logo.svg',
-            iconSize: [15.2, 15.2]
+            iconUrl: 'markers/Secours Catholique (rond).svg',
+            iconSize: [15.959999999999999, 15.959999999999999]
         }),
                 interactive: true,
             }
@@ -677,7 +676,7 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/SSVP.svg',
+            iconUrl: 'markers/SSVP (sfb).svg',
             iconSize: [15.2, 15.2]
         }),
                 interactive: true,
@@ -739,7 +738,7 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/Restos_du_coeur_Logo.svg',
+            iconUrl: 'markers/RDC (fond blanc).svg',
             iconSize: [19.0, 19.0]
         }),
                 interactive: true,
@@ -801,8 +800,8 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/secours populaire.svg',
-            iconSize: [19.0, 19.0]
+            iconUrl: 'markers/Secours Populaire Français.svg',
+            iconSize: [16.72, 16.72]
         }),
                 interactive: true,
             }
@@ -856,12 +855,16 @@
         function style_Associationspartenaires28_13_0() {
             return {
                 pane: 'pane_Associationspartenaires28_13',
-        rotationAngle: 0.0,
-        rotationOrigin: 'center center',
-        icon: L.icon({
-            iconUrl: 'markers/Banque alimenatire sf.svg',
-            iconSize: [15.2, 15.2]
-        }),
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(255,127,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,127,0,1.0)',
                 interactive: true,
             }
         }
@@ -880,7 +883,7 @@
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_Associationspartenaires28_13_0(feature));
+                return L.circleMarker(latlng, style_Associationspartenaires28_13_0(feature));
             },
         });
         bounds_group.addLayer(layer_Associationspartenaires28_13);
@@ -1045,8 +1048,8 @@
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/BA fond blanc .svg',
-            iconSize: [45.599999999999994, 45.599999999999994]
+            iconUrl: 'markers/BA (entrepôt).svg',
+            iconSize: [22.799999999999997, 22.799999999999997]
         }),
                 interactive: true,
             }
